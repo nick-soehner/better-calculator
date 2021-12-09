@@ -21,23 +21,31 @@ body {
   position: relative;
 }
 
+img {
+  position: absolute;
+}
+
 .span-two {
   grid-column: span 2;
 }
 
 .calculator-grid {
+  margin-top: 90px;
   width: 400px;
   height: 500px;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) (5, 100px);
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows:  (5, 100px);
   gap: 2px;
+  z-index: 100;
+  transform: translate(48px);
 }
 
 .calculator-grid > button {
   cursor: pointer;
   font-size: 2rem;
   border: 2px solid #fff;
+  border-radius: 50px;
   outline: none;
   background-color: rgba(255, 255, 255, 1);
 }
@@ -49,6 +57,7 @@ body {
 .output {
   grid-column: span 4;
   background-color: rgba(0, 0, 0, 0.75);
+  height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
