@@ -10,6 +10,7 @@ class Calculator {
     constructor(previousOperandText, currentOperandText) {
         this.previousOperandText = previousOperandText;
         this.currentOperandText = currentOperandText;
+        this.wicked();
         this.clear();
     }
 
@@ -94,6 +95,12 @@ class Calculator {
             )} ${this.operation}`;
         } else {
             this.previousOperandText.innerText = "";
+        }
+    }
+
+    wicked() {
+        if (this.currentOperand === "8008") {
+            return (document.getElementById("wicked").style.display = "show");
         }
     }
 }

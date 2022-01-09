@@ -25,6 +25,13 @@ img {
   position: absolute;
 }
 
+#wicked {
+  position: absolute;
+  z-index: 1000;
+  transform: translateY(-9rem);
+  display: none;
+}
+
 .span-two {
   grid-column: span 2;
 }
